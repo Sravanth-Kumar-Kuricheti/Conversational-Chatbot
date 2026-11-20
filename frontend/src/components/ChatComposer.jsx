@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ArrowUp, Square, Plus, X, FileText, Image as ImageIcon } from 'lucide-react';
+import { ArrowUp, Square, Plus, X, FileText } from 'lucide-react';
 import { useChat } from '../context/ChatContext';
 
 export default function ChatComposer({ onFollowStream }) {
@@ -147,7 +147,7 @@ export default function ChatComposer({ onFollowStream }) {
           <button
             type="button"
             onClick={handleRemoveAttachment}
-            className="p-1 rounded-full text-[#8E8EA0] hover:text-white hover:bg-[#383838] transition-colors ml-1"
+            className="p-1 rounded-full text-[#8E8EA0] hover:text-white hover:bg-[#383838] transition-colors ml-1 cursor-pointer"
             title="Remove attachment"
           >
             <X className="w-4 h-4" />
@@ -165,7 +165,7 @@ export default function ChatComposer({ onFollowStream }) {
       {/* Composer Container */}
       <div className="relative flex flex-col bg-[#303030] rounded-[24px] border border-[#414141] shadow-lg transition-all focus-within:border-[#525252]">
         <div className="flex items-end px-3.5 py-2.5 gap-2">
-          {/* Working Plus (+) Attachment Button */}
+          {/* Plus (+) Attachment Button */}
           <button
             type="button"
             onClick={handleFileClick}
@@ -181,7 +181,7 @@ export default function ChatComposer({ onFollowStream }) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder={attachment ? 'Add instructions or ask a question about the file...' : 'Message PyChat AI...'}
+            placeholder={attachment ? 'Add instructions or ask a question about the file...' : 'Message Esmeray AI...'}
             rows={1}
             className="flex-1 bg-transparent border-0 resize-none text-[15px] text-[#ECECEC] placeholder-[#8E8EA0] focus:outline-none focus:ring-0 leading-relaxed max-h-[180px] py-1.5 overflow-y-auto"
             style={{ minHeight: '24px' }}
@@ -217,9 +217,9 @@ export default function ChatComposer({ onFollowStream }) {
         </div>
       </div>
 
-      {/* ChatGPT-style Subtext */}
+      {/* Esmeray AI Subtext */}
       <p className="text-center text-[12px] text-[#8E8EA0] mt-2 select-none">
-        PyChat AI can make mistakes. Supports text, PDFs, and images with Groq AI.
+        Esmeray AI can make mistakes. Supports text, PDFs, and images with Groq AI.
       </p>
     </div>
   );

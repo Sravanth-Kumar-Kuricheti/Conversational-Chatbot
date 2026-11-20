@@ -191,7 +191,7 @@ class GroqService:
 
         if not self.is_configured:
             demo_text = (
-                "👋 **Welcome to PyChat AI!**\n\n"
+                "👋 **Welcome to Esmeray AI ☪︎!**\n\n"
                 "Please configure your `GROQ_API_KEY` in `backend/.env`.\n"
                 "Once configured, real-time completions and vision will stream live!"
             )

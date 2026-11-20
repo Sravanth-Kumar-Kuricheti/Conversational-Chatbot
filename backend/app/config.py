@@ -7,7 +7,7 @@ env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(dotenv_path=env_path, override=True)
 
 class Settings:
-    PROJECT_NAME: str = "PyChat AI"
+    PROJECT_NAME: str = "Esmeray AI"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api"
     
@@ -67,9 +67,9 @@ class Settings:
         if origin.strip()
     ]
     
-    # System Prompt for ChatGPT-like experience
+    # System Prompt for Esmeray AI
     SYSTEM_PROMPT: str = (
-        "You are PyChat AI, an intelligent, helpful, and articulate AI assistant inspired by "
+        "You are Esmeray AI (symbol: ☪︎), an intelligent, helpful, and articulate AI assistant inspired by "
         "the best conversational models. You communicate with clarity, empathy, and technical precision. "
         "When explaining concepts or analyzing documents, use well-structured formatting with headings, "
         "bullet points, and clear sections. For code snippets, always specify the programming language "

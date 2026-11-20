@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Sparkles, Code2, Cpu, FileText } from 'lucide-react';
+import { Sparkles, Code2, Cpu, FileText } from 'lucide-react';
 import { useChat } from '../context/ChatContext';
 
 const EXAMPLE_PROMPTS = [
@@ -30,9 +30,9 @@ export default function WelcomeScreen({ onSelectPrompt }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] max-w-[800px] mx-auto px-4 text-center select-none">
-      {/* PyChat AI Logo Icon */}
-      <div className="w-16 h-16 rounded-2xl bg-[#10A37F] flex items-center justify-center mb-6 shadow-xl shadow-[#10A37F]/10 ring-1 ring-[#10A37F]/30">
-        <Bot className="w-9 h-9 text-white" />
+      {/* Esmeray AI Hero Logo with ☪︎ symbol */}
+      <div className="w-16 h-16 rounded-2xl bg-[#10A37F] flex items-center justify-center mb-6 shadow-xl shadow-[#10A37F]/10 ring-1 ring-[#10A37F]/30 text-white text-[32px] font-bold select-none leading-none">
+        ☪︎
       </div>
 
       {/* Main Heading (Exact 24px) */}
@@ -42,7 +42,7 @@ export default function WelcomeScreen({ onSelectPrompt }) {
 
       {/* Subdescription */}
       <p className="text-[14.5px] text-[#8E8EA0] max-w-md mb-8 leading-relaxed">
-        Ultra-fast AI conversations powered by Groq. Choose a prompt below or start typing.
+        Ultra-fast AI conversations powered by Groq and Esmeray AI. Choose a prompt below or start typing.
       </p>
 
       {/* Example Prompts Grid (Rounded 12px cards) */}

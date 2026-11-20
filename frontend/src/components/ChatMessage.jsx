@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { Copy, Check, RotateCcw, Bot } from 'lucide-react';
+import { Copy, Check, RotateCcw } from 'lucide-react';
 import CodeBlock from './CodeBlock';
 import RecommendationSection from './RecommendationSection';
 
@@ -49,9 +49,9 @@ export default function ChatMessage({
 
   return (
     <div className="flex gap-3 sm:gap-4 w-full group">
-      {/* 32px Assistant Avatar */}
-      <div className="w-8 h-8 rounded-full bg-[#10A37F] flex items-center justify-center shrink-0 mt-0.5 shadow-md">
-        <Bot className="w-5 h-5 text-white" />
+      {/* 32px Assistant Avatar with ☪︎ symbol */}
+      <div className="w-8 h-8 rounded-full bg-[#10A37F] flex items-center justify-center shrink-0 mt-0.5 shadow-md text-white text-[16px] font-bold select-none leading-none">
+        ☪︎
       </div>
 
       {/* Assistant Content Body */}
@@ -91,7 +91,7 @@ export default function ChatMessage({
           <div className="flex items-center gap-2 mt-3 pt-1 text-[#8E8EA0] text-xs opacity-80 group-hover:opacity-100 transition-opacity">
             <button
               onClick={handleCopy}
-              className="flex items-center gap-1.5 hover:text-white px-2 py-1 rounded hover:bg-[#2A2A2A] transition-colors"
+              className="flex items-center gap-1.5 hover:text-white px-2 py-1 rounded hover:bg-[#2A2A2A] transition-colors cursor-pointer"
               title="Copy response"
             >
               {copied ? (
@@ -110,7 +110,7 @@ export default function ChatMessage({
             {isLatestAssistant && onRetry && (
               <button
                 onClick={onRetry}
-                className="flex items-center gap-1.5 hover:text-white px-2 py-1 rounded hover:bg-[#2A2A2A] transition-colors"
+                className="flex items-center gap-1.5 hover:text-white px-2 py-1 rounded hover:bg-[#2A2A2A] transition-colors cursor-pointer"
                 title="Retry response"
               >
                 <RotateCcw className="w-3.5 h-3.5" />

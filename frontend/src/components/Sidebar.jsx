@@ -9,8 +9,7 @@ import {
   X,
   Settings,
   Info,
-  ChevronLeft,
-  Bot
+  ChevronLeft
 } from 'lucide-react';
 import { useChat } from '../context/ChatContext';
 
@@ -112,17 +111,17 @@ export default function Sidebar() {
         <div className="p-3 shrink-0 flex flex-col gap-2.5">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-[#10A37F] flex items-center justify-center">
-                <Bot className="w-4 h-4 text-white" />
+              <div className="w-7 h-7 rounded-lg bg-[#10A37F] flex items-center justify-center text-white text-[15px] font-bold select-none leading-none">
+                ☪︎
               </div>
               <span className="font-semibold text-[15px] text-white tracking-tight">
-                PyChat AI
+                Esmeray AI
               </span>
             </div>
             {/* Collapse button on desktop */}
             <button
               onClick={() => setIsSidebarOpen(false)}
-              className="p-1.5 text-[#8E8EA0] hover:text-white rounded-lg hover:bg-[#252525] hidden md:block"
+              className="p-1.5 text-[#8E8EA0] hover:text-white rounded-lg hover:bg-[#252525] hidden md:block cursor-pointer"
               title="Close sidebar"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -132,7 +131,7 @@ export default function Sidebar() {
           {/* New Chat Button */}
           <button
             onClick={createNewChat}
-            className="flex items-center justify-between w-full px-3 py-2 bg-[#212121] hover:bg-[#282828] border border-[#383838] hover:border-[#4A4A4A] text-white rounded-xl text-[14px] font-medium transition-all shadow-sm group"
+            className="flex items-center justify-between w-full px-3 py-2 bg-[#212121] hover:bg-[#282828] border border-[#383838] hover:border-[#4A4A4A] text-white rounded-xl text-[14px] font-medium transition-all shadow-sm group cursor-pointer"
           >
             <div className="flex items-center gap-2.5">
               <Plus className="w-4 h-4 text-[#10A37F] group-hover:scale-110 transition-transform" />
@@ -153,7 +152,7 @@ export default function Sidebar() {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8E8EA0] hover:text-white"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8E8EA0] hover:text-white cursor-pointer"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -218,14 +217,14 @@ export default function Sidebar() {
                             <>
                               <button
                                 onClick={(e) => handleSaveRename(conv.id, e)}
-                                className="p-1 text-[#10A37F] hover:text-emerald-400"
+                                className="p-1 text-[#10A37F] hover:text-emerald-400 cursor-pointer"
                                 title="Save title"
                               >
                                 <Check className="w-3.5 h-3.5" />
                               </button>
                               <button
                                 onClick={handleCancelRename}
-                                className="p-1 text-[#8E8EA0] hover:text-white"
+                                className="p-1 text-[#8E8EA0] hover:text-white cursor-pointer"
                                 title="Cancel"
                               >
                                 <X className="w-3.5 h-3.5" />
@@ -236,7 +235,7 @@ export default function Sidebar() {
                               <span className="text-[11px] text-red-300">Delete?</span>
                               <button
                                 onClick={(e) => handleDelete(conv.id, e)}
-                                className="text-red-400 hover:text-red-300 font-bold text-xs"
+                                className="text-red-400 hover:text-red-300 font-bold text-xs cursor-pointer"
                                 title="Confirm delete"
                               >
                                 Yes
@@ -246,7 +245,7 @@ export default function Sidebar() {
                                   e.stopPropagation();
                                   setDeleteConfirmId(null);
                                 }}
-                                className="text-neutral-400 hover:text-white text-xs"
+                                className="text-neutral-400 hover:text-white text-xs cursor-pointer"
                               >
                                 No
                               </button>
@@ -255,7 +254,7 @@ export default function Sidebar() {
                             <div className="hidden group-hover:flex items-center gap-1">
                               <button
                                 onClick={(e) => handleStartRename(conv, e)}
-                                className="p-1 text-[#8E8EA0] hover:text-white rounded hover:bg-[#383838]"
+                                className="p-1 text-[#8E8EA0] hover:text-white rounded hover:bg-[#383838] cursor-pointer"
                                 title="Rename conversation"
                               >
                                 <Edit2 className="w-3.5 h-3.5" />
@@ -265,7 +264,7 @@ export default function Sidebar() {
                                   e.stopPropagation();
                                   setDeleteConfirmId(conv.id);
                                 }}
-                                className="p-1 text-[#8E8EA0] hover:text-red-400 rounded hover:bg-[#383838]"
+                                className="p-1 text-[#8E8EA0] hover:text-red-400 rounded hover:bg-[#383838] cursor-pointer"
                                 title="Delete conversation"
                               >
                                 <Trash2 className="w-3.5 h-3.5" />
@@ -286,17 +285,17 @@ export default function Sidebar() {
         <div className="p-2 border-t border-[#303030] shrink-0 space-y-1">
           <button
             onClick={() => setSettingsOpen(true)}
-            className="w-full flex items-center gap-2.5 px-3 py-2 text-[13.5px] text-[#ECECEC] hover:bg-[#212121] rounded-lg transition-colors"
+            className="w-full flex items-center gap-2.5 px-3 py-2 text-[13.5px] text-[#ECECEC] hover:bg-[#212121] rounded-lg transition-colors cursor-pointer"
           >
             <Settings className="w-4 h-4 text-[#8E8EA0]" />
             <span>Settings</span>
           </button>
           <button
             onClick={() => setAboutOpen(true)}
-            className="w-full flex items-center gap-2.5 px-3 py-2 text-[13.5px] text-[#ECECEC] hover:bg-[#212121] rounded-lg transition-colors"
+            className="w-full flex items-center gap-2.5 px-3 py-2 text-[13.5px] text-[#ECECEC] hover:bg-[#212121] rounded-lg transition-colors cursor-pointer"
           >
             <Info className="w-4 h-4 text-[#8E8EA0]" />
-            <span>About PyChat AI</span>
+            <span>About Esmeray AI</span>
           </button>
         </div>
       </aside>

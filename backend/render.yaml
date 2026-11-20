@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: pychat-ai-backend
+    name: esmeray-ai-backend
     runtime: python
     region: oregon
     plan: free
@@ -20,6 +20,6 @@ services:
       - key: DATABASE_URL
         value: sqlite:////var/data/pychat.db
     disk:
-      name: pychat-data
+      name: esmeray-data
       mountPath: /var/data
       sizeGB: 1

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { PanelLeft, ChevronDown, Check, Plus, Bot, Sparkles, Zap, Shield } from 'lucide-react';
+import { PanelLeft, ChevronDown, Check, Plus } from 'lucide-react';
 import { useChat } from '../context/ChatContext';
 
 export default function Navbar() {
@@ -34,7 +34,6 @@ export default function Navbar() {
   });
 
   const handleToggleSidebar = () => {
-    // If screen is mobile (<768px), open mobile drawer
     if (window.innerWidth < 768) {
       setIsMobileDrawerOpen((prev) => !prev);
     } else {
@@ -48,20 +47,20 @@ export default function Navbar() {
       <div className="flex items-center gap-2">
         <button
           onClick={handleToggleSidebar}
-          className="p-2 text-[#ECECEC] hover:bg-[#2F2F2F] rounded-lg transition-colors"
+          className="p-2 text-[#ECECEC] hover:bg-[#2F2F2F] rounded-lg transition-colors cursor-pointer"
           title="Toggle Sidebar"
           aria-label="Toggle Sidebar"
         >
           <PanelLeft className="w-5 h-5" />
         </button>
 
-        {/* PyChat AI Brand */}
+        {/* Esmeray AI Brand with ☪︎ symbol */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={createNewChat}>
-          <div className="w-6 h-6 rounded-md bg-[#10A37F] flex items-center justify-center">
-            <Bot className="w-4 h-4 text-white" />
+          <div className="w-6 h-6 rounded-md bg-[#10A37F] flex items-center justify-center text-white text-[14px] font-bold select-none leading-none">
+            ☪︎
           </div>
           <span className="font-semibold text-[16px] text-white tracking-tight hidden sm:inline">
-            PyChat AI
+            Esmeray AI
           </span>
         </div>
       </div>
@@ -70,7 +69,7 @@ export default function Navbar() {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[14px] font-medium text-[#ECECEC] hover:bg-[#2A2A2A] transition-colors group"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[14px] font-medium text-[#ECECEC] hover:bg-[#2A2A2A] transition-colors group cursor-pointer"
         >
           <span className="text-white font-medium truncate max-w-[150px] sm:max-w-[220px]">
             {currentModelObj.name}
@@ -104,7 +103,7 @@ export default function Navbar() {
                       setActiveModel(model.id);
                       setDropdownOpen(false);
                     }}
-                    className={`w-full flex items-start gap-3 p-2.5 rounded-lg text-left transition-colors ${
+                    className={`w-full flex items-start gap-3 p-2.5 rounded-lg text-left transition-colors cursor-pointer ${
                       isSelected
                         ? 'bg-[#303030] text-white'
                         : 'text-[#ECECEC] hover:bg-[#2A2A2A]'
@@ -140,7 +139,7 @@ export default function Navbar() {
       <div className="flex items-center gap-2">
         <button
           onClick={createNewChat}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#2A2A2A] hover:bg-[#333333] border border-[#3E3E3E] text-white text-[13px] font-medium rounded-lg transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#2A2A2A] hover:bg-[#333333] border border-[#3E3E3E] text-white text-[13px] font-medium rounded-lg transition-colors cursor-pointer"
           title="Start a new chat"
         >
           <Plus className="w-4 h-4 text-[#10A37F]" />

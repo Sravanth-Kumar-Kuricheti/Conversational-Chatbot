@@ -8,17 +8,16 @@ from app.routes.chat import router as chat_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize SQLite database and tables
-    print("[PyChat AI] Initializing SQLite database...")
+    print("[Esmeray AI ☪︎] Initializing SQLite database...")
     init_db()
-    print("[PyChat AI] Database initialized successfully.")
+    print("[Esmeray AI ☪︎] Database initialized successfully.")
     yield
-    print("[PyChat AI] Server shutting down.")
+    print("[Esmeray AI ☪︎] Server shutting down.")
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
-    description="ChatGPT-inspired AI conversational chatbot backend powered by FastAPI, SQLite, and Groq SDK.",
+    description="Esmeray AI (☪︎) conversational chatbot backend powered by FastAPI, SQLite, and Groq SDK.",
     lifespan=lifespan
 )
 
@@ -37,7 +36,8 @@ app.include_router(chat_router)
 @app.get("/")
 def root():
     return {
-        "app": "PyChat AI",
+        "app": "Esmeray AI",
+        "symbol": "☪︎",
         "status": "online",
         "docs": "/docs",
         "health": "/api/health"
