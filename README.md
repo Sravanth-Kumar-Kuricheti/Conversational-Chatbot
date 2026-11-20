@@ -305,7 +305,7 @@ Refer to the repository's `DEPLOYMENT.md` for deployment configuration and instr
 B.Tech – Artificial Intelligence & Data Science
 
 - GitHub: https://github.com/Sravanth-Kumar-Kuricheti
-- LinkedIn: https://www.linkedin.com/in/sravanthkumar/
+- LinkedIn: https://www.linkedin.com/in/sravanthkumarkuricheti/
 
 ---
 
